@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google Calendar</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      id="favicon"
+      type="image/x-icon"
+      href="assets/images/calendar_14_2x.png"
+      rel="icon" />
+  </head>
+  <body>
+    <header class="flex">
+      <div class="menu-heading flex">
+        <button id="menubtn" class="menu-button">
+          <img
+            src="assets/images/icons/menu.svg"
+            alt="menu button"
+            width="24px"
+            height="24px" />
+        </button>
+        <div class="header-haeding flex align">
+          <img
+            src="assets/images/calendar_14_2x.png"
+            width="40px"
+            height="40px" />
+          <span class="heading">Calendar</span>
+        </div>
+      </div>
+      <div class="second-div flex align">
+        <div class="month-heading flex align">
+          <button class="today-btn"><span>Today</span></button>
+          <button class="next-prev-btn">
+            <img
+              src="assets/images/icons/chevron_left.svg"
+              width="24px"
+              height="24px" />
+          </button>
+          <button class="next-prev-btn">
+            <img
+              src="assets/images/icons/chevron_right.svg"
+              width="24px"
+              height="24px" />
+          </button>
+          <span>April 2026</span>
+        </div>
+        <div class="week-header flex align">
+          <button class="search-btn">
+            <img src="assets/images/icons/search.svg" alt="search" />
+          </button>
+          <button class="help-btn">
+            <img src="assets/images/icons/help.svg" alt="help" />
+          </button>
+          <button class="setting-btn">
+            <img src="assets/images/icons/settings.svg" alt="setting" />
+          </button>
+          <button class="week-btn flex align">
+            <span>Week</span
+            ><img
+              src="assets/images/icons/arrow_drop_down.svg"
+              width="18px"
+              height="18px" />
+          </button>
+          <div class="two-part-btn flex">
+            <button class="date-range-btn">
+              <img
+                src="assets/images/icons/date_range.svg"
+                width="20px"
+                height="20px" />
+            </button>
+            <button class="task-alt-btn">
+              <img
+                src="assets/images/icons/task_alt.svg"
+                width="20px"
+                height="20px" />
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="app-account-btns flex">
+        <button class="app-btn">
+          <a href="#">
+            <img src="assets/images/icons/apps.svg" width="24px" height="24px"
+          /></a>
+        </button>
+        <button class="account-btn">
+          <a href="#">
+            <img
+              class="account-icon"
+              src="assets/images/icons/account-icon.png"
+              width="31px"
+              height="31px"
+          /></a>
+        </button>
+      </div>
+    </header>
+    <button class="create-btn flex align">
+      <img
+        id="add-icon"
+        src="assets/images/icons/add_2.svg"
+        width="20px"
+        height="20px" /><span id="create-btn-text">Create</span
+      ><img
+        id="dropdawn-icon"
+        src="assets/images/icons/arrow_drop_down.svg"
+        width="18px"
+        height="18px" />
+    </button>
+    <div class="right-sidebar flex align">
+      <button>
+        <img
+          class="right-sidebar-img"
+          src="assets/images/keep_2020q4v3_2x.png"
+          width="20px"
+          height="20px" />
+      </button>
+      <button>
+        <img
+          class="right-sidebar-img"
+          src="assets/images/tasks_2021_2x.png"
+          width="20px"
+          height="20px" />
+      </button>
+      <button>
+        <img
+          class="right-sidebar-img"
+          src="assets/images/contacts_2022_2x.png"
+          width="20px"
+          height="20px" />
+      </button>
+      <button>
+        <img
+          class="right-sidebar-img"
+          src="assets/images/maps_v7_2x_web_24dp.png"
+          width="20px"
+          height="20px" />
+      </button>
+    </div>
+    <div class="main-section flex">
+      <div class="week-days flex">
+        <div class="gmt flex align">GMT+03:30</div>
+        <div class="border"></div>
+        <h2 id="sun">
+          <div class="day">SUN</div>
+          <div><button class="numbers">19</button></div>
+        </h2>
+        <div class="border"></div>
+        <h2 id="mon">
+          <div class="day">MON</div>
+          <div><button class="numbers">20</button></div>
+        </h2>
+        <div class="border"></div>
+        <h2 id="tue">
+          <div class="day">TUE</div>
+          <div><button class="numbers">21</button></div>
+        </h2>
+        <div class="border"></div>
+        <h2 id="wed">
+          <div class="day">WED</div>
+          <div><button class="numbers">22</button></div>
+        </h2>
+        <div class="border"></div>
+        <h2 id="thu">
+          <div class="day">THU</div>
+          <div><button class="numbers">23</button></div>
+        </h2>
+        <div class="border"></div>
+        <h2 id="fri">
+          <div class="day">FRI</div>
+          <div><button class="numbers">24</button></div>
+        </h2>
+        <div class="border"></div>
+        <h2 id="sat">
+          <div class="day">SAT</div>
+          <div><button class="numbers">25</button></div>
+        </h2>
+      </div>
+      <div class="table flex">
+        <div class="hours">
+          <span>1 AM</span><span>2 AM</span><span>3 AM</span><span>4 AM</span
+          ><span>5 AM</span><span>6 AM</span><span>7 AM</span><span>8 AM</span
+          ><span>9 AM</span><span>10 AM</span><span>11 AM</span
+          ><span>12 PM</span><span>1 PM</span><span>2 PM</span><span>3 PM</span
+          ><span>4 PM</span><span>5 PM</span><span>6 PM</span><span>7 PM</span
+          ><span>8 PM</span><span>9 PM</span><span>10 PM</span
+          ><span>11 PM</span>
+        </div>
+        <div class="space">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="sunday">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="monday">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="tuesday">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="wednesday">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="thursday">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="friday">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="saturday">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+    <section class="left-sidebar flex">
+      <div class="left-side-calendar flex align">
+        <table>
+          <caption>
+            <div class="months flex align">
+              <h3>April 2026</h3>
+              <div class="next-prev-month-btn">
+                <button>
+                  <img
+                    class="next-prev-month-img"
+                    src="assets/images/icons/chevron_left.svg"
+                    width="18px"
+                    height="18px" />
+                </button>
+                <button>
+                  <img
+                    class="next-prev-month-img"
+                    src="assets/images/icons/chevron_right.svg"
+                    width="18px"
+                    height="18px" />
+                </button>
+              </div>
+            </div>
+          </caption>
+          <tr>
+            <th>S</th>
+            <th>M</th>
+            <th>T</th>
+            <th>W</th>
+            <th>T</th>
+            <th>F</th>
+            <th>S</th>
+          </tr>
+          <tr>
+            <td class="item">30</td>
+            <td class="item">1</td>
+            <td class="item">2</td>
+            <td class="item">3</td>
+            <td class="item">4</td>
+            <td class="item">5</td>
+            <td class="item">6</td>
+          </tr>
+          <tr>
+            <td class="item">7</td>
+            <td class="item">8</td>
+            <td class="item">9</td>
+            <td class="item">10</td>
+            <td class="item">11</td>
+            <td class="item">12</td>
+            <td class="item">13</td>
+          </tr>
+          <tr>
+            <td class="item">14</td>
+            <td class="item">15</td>
+            <td class="item">16</td>
+            <td class="item">17</td>
+            <td class="item">18</td>
+            <td class="item">19</td>
+            <td class="item">20</td>
+          </tr>
+          <tr>
+            <td class="item">21</td>
+            <td class="item">22</td>
+            <td class="item">23</td>
+            <td class="item">24</td>
+            <td class="item">25</td>
+            <td class="item">26</td>
+            <td class="item">27</td>
+          </tr>
+          <tr>
+            <td class="item">28</td>
+            <td class="item">29</td>
+            <td class="item">30</td>
+            <td class="item">31</td>
+            <td class="item">1</td>
+            <td class="item">2</td>
+            <td class="item">3</td>
+          </tr>
+          <tr>
+            <td class="item">4</td>
+            <td class="item">5</td>
+            <td class="item">6</td>
+            <td class="item">7</td>
+            <td class="item">8</td>
+            <td class="item">9</td>
+            <td class="item">10</td>
+          </tr>
+        </table>
+        <div class="search-people flex align">
+          <img src="assets/images/icons/group.svg" width="24px" height="24px" />
+          <input
+            type="text"
+            placeholder="Search for people"
+            autocomplete="list" />
+        </div>
+        <div class="booking-page flex">
+          <h3>Booking pages</h3>
+          <button>
+            <img
+              src="assets/images/icons/add_31.svg"
+              width="20px"
+              height="20px" />
+          </button>
+        </div>
+        <div class="my-calendars flex">
+          <button class="my-calendar-btn flex align">
+            <h3 class="my-calander-header">My calendars</h3>
+            <img
+              class="dropdown-icon"
+              src="assets/images/icons/chevron_left.svg" />
+          </button>
+          <button class="other-calendar-btn flex align">
+            <h3 class="my-calander-header">Other calanders</h3>
+            <span class="other-calendar-add-btn">
+              <img
+                src="assets/images/icons/add_31.svg"
+                alt="add"
+                width="20px"
+                height="20px" />
+            </span>
+            <img
+              class="dropdown-icon"
+              src="assets/images/icons/chevron_left.svg"
+              alt="drop down button"
+              width="22px"
+              height="22px" />
+          </button>
+        </div>
+        <div class="terms-privacy">
+          <a class="terms-link" href="#">Terms</a><span> - </span
+          ><a class="Privacy-link" href="#">Privacy</a>
+        </div>
+      </div>
+    </section>
+    <script src="./script.js"></script>
+  </body>
+</html>
